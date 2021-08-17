@@ -1,19 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitTracker", "TransitTracker\TransitTracker.csproj", "{1A9A8737-21DA-444F-8A62-899F75D2458F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{A32FCF16-8749-443D-8AFD-0A1211FAA330}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{687BB633-6B79-41E1-96C2-255622420949}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{20D06B9D-02C0-4B7D-873A-E83EEE829941}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{BF272192-8C39-436B-AD7A-1CE5EA63B10A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModel", "ViewModel", "{3A6593DB-5310-4016-BCEB-2814575876B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{F4BA5958-A324-4D64-BD84-D46553FB1569}"
 EndProject
@@ -25,19 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.LoggingIntegration", "Integration\ConsoleApp.LoggingIntegration\ConsoleApp.LoggingIntegration.csproj", "{0180D27F-19E6-4242-9DE6-7D9236538A0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.AutoFacIntegration", "Integration\ConsoleApp.AutoFacIntegration\ConsoleApp.AutoFacIntegration.csproj", "{AF03B290-3557-4EF4-B942-A9B662471D5D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{BFF928CC-C059-4E82-B698-5734FA35EC0B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Logging", "Modules\Modules.Logging\Modules.Logging.csproj", "{52485788-9765-4D3B-B4C7-5088870068CA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppBase", "Integration\ConsoleAppBase\ConsoleAppBase.csproj", "{F4184BFA-CCB7-4F6F-8FA8-BF52AAEE731D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "Integration\ConsoleApp\ConsoleApp.csproj", "{7EA8E052-13FD-4727-B3D1-DE07B1721356}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.NET", "Framework\Framework.NET\Framework.NET.csproj", "{58B7C459-9204-46C5-B5FF-EA5942248B3C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLine", "Integration\CommandLine\CommandLine\CommandLine.csproj", "{D718F365-3243-41F8-9162-3432D2F772BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.AutoFac", "Framework\Framework.AutoFac\Framework.AutoFac\Framework.AutoFac.csproj", "{B44A52A6-739B-4FF1-B9A1-450CDA7C0CDC}"
 EndProject
@@ -87,22 +71,6 @@ Global
 		{0180D27F-19E6-4242-9DE6-7D9236538A0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0180D27F-19E6-4242-9DE6-7D9236538A0E}.Release|x64.ActiveCfg = Release|Any CPU
 		{0180D27F-19E6-4242-9DE6-7D9236538A0E}.Release|x64.Build.0 = Release|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Debug|x64.Build.0 = Debug|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Release|x64.ActiveCfg = Release|Any CPU
-		{AF03B290-3557-4EF4-B942-A9B662471D5D}.Release|x64.Build.0 = Release|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Debug|x64.Build.0 = Debug|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Release|x64.ActiveCfg = Release|Any CPU
-		{52485788-9765-4D3B-B4C7-5088870068CA}.Release|x64.Build.0 = Release|Any CPU
 		{F4184BFA-CCB7-4F6F-8FA8-BF52AAEE731D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4184BFA-CCB7-4F6F-8FA8-BF52AAEE731D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4184BFA-CCB7-4F6F-8FA8-BF52AAEE731D}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -127,14 +95,6 @@ Global
 		{58B7C459-9204-46C5-B5FF-EA5942248B3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58B7C459-9204-46C5-B5FF-EA5942248B3C}.Release|x64.ActiveCfg = Release|Any CPU
 		{58B7C459-9204-46C5-B5FF-EA5942248B3C}.Release|x64.Build.0 = Release|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Debug|x64.Build.0 = Debug|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Release|x64.ActiveCfg = Release|Any CPU
-		{D718F365-3243-41F8-9162-3432D2F772BA}.Release|x64.Build.0 = Release|Any CPU
 		{B44A52A6-739B-4FF1-B9A1-450CDA7C0CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B44A52A6-739B-4FF1-B9A1-450CDA7C0CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B44A52A6-739B-4FF1-B9A1-450CDA7C0CDC}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -183,81 +143,16 @@ Global
 		{4F20B080-3529-4621-80C2-7A8BAF8931C0} = {A32FCF16-8749-443D-8AFD-0A1211FAA330}
 		{ACA225CD-6A96-4D34-89F5-98EE8F5DEB0E} = {A32FCF16-8749-443D-8AFD-0A1211FAA330}
 		{0180D27F-19E6-4242-9DE6-7D9236538A0E} = {E27DD79D-22A8-41FD-A8D4-1DD84E7FE8CA}
-		{AF03B290-3557-4EF4-B942-A9B662471D5D} = {E27DD79D-22A8-41FD-A8D4-1DD84E7FE8CA}
-		{52485788-9765-4D3B-B4C7-5088870068CA} = {BFF928CC-C059-4E82-B698-5734FA35EC0B}
 		{F4184BFA-CCB7-4F6F-8FA8-BF52AAEE731D} = {E27DD79D-22A8-41FD-A8D4-1DD84E7FE8CA}
 		{7EA8E052-13FD-4727-B3D1-DE07B1721356} = {E27DD79D-22A8-41FD-A8D4-1DD84E7FE8CA}
 		{58B7C459-9204-46C5-B5FF-EA5942248B3C} = {A32FCF16-8749-443D-8AFD-0A1211FAA330}
-		{D718F365-3243-41F8-9162-3432D2F772BA} = {E27DD79D-22A8-41FD-A8D4-1DD84E7FE8CA}
 		{B44A52A6-739B-4FF1-B9A1-450CDA7C0CDC} = {A32FCF16-8749-443D-8AFD-0A1211FAA330}
 		{64E560CF-6CD7-4AA3-BC56-96FE6FAFA7B5} = {F4BA5958-A324-4D64-BD84-D46553FB1569}
 		{0BDDA1B2-395B-4DF6-B7A3-26710595AF03} = {F4BA5958-A324-4D64-BD84-D46553FB1569}
 		{89E5ED29-019D-493F-B8DB-64863D8FDB03} = {F4BA5958-A324-4D64-BD84-D46553FB1569}
 		{0BC9E133-C698-4BE3-86D0-E6CC48B462F2} = {A32FCF16-8749-443D-8AFD-0A1211FAA330}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 16
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://dbcsw5:8080/tfs/dbcsw
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Framework\\Framework.Logging.Log4Net\\Framework.Logging.Log4Net.csproj
-		SccProjectTopLevelParentUniqueName1 = TransitTracker.sln
-		SccProjectName1 = Framework/Framework.Logging.Log4Net
-		SccLocalPath1 = Framework\\Framework.Logging.Log4Net
-		SccProjectUniqueName2 = Framework\\Framework.Logging\\Framework.Logging.csproj
-		SccProjectTopLevelParentUniqueName2 = TransitTracker.sln
-		SccProjectName2 = Framework/Framework.Logging
-		SccLocalPath2 = Framework\\Framework.Logging
-		SccProjectUniqueName3 = Framework\\Framework.NET\\Framework.NET.csproj
-		SccProjectTopLevelParentUniqueName3 = TransitTracker.sln
-		SccProjectName3 = Framework/Framework.NET
-		SccLocalPath3 = Framework\\Framework.NET
-		SccProjectUniqueName4 = Integration\\CommandLine\\CommandLine\\CommandLine.csproj
-		SccProjectTopLevelParentUniqueName4 = TransitTracker.sln
-		SccProjectName4 = Integration/CommandLine/CommandLine
-		SccLocalPath4 = Integration\\CommandLine\\CommandLine
-		SccProjectUniqueName5 = Integration\\ConsoleApp.AutoFacIntegration\\ConsoleApp.AutoFacIntegration.csproj
-		SccProjectTopLevelParentUniqueName5 = TransitTracker.sln
-		SccProjectName5 = Integration/ConsoleApp.AutoFacIntegration
-		SccLocalPath5 = Integration\\ConsoleApp.AutoFacIntegration
-		SccProjectUniqueName6 = Integration\\ConsoleApp.LoggingIntegration\\ConsoleApp.LoggingIntegration.csproj
-		SccProjectTopLevelParentUniqueName6 = TransitTracker.sln
-		SccProjectName6 = Integration/ConsoleApp.LoggingIntegration
-		SccLocalPath6 = Integration\\ConsoleApp.LoggingIntegration
-		SccProjectUniqueName7 = Integration\\ConsoleApp\\ConsoleApp.csproj
-		SccProjectTopLevelParentUniqueName7 = TransitTracker.sln
-		SccProjectName7 = Integration/ConsoleApp
-		SccLocalPath7 = Integration\\ConsoleApp
-		SccProjectUniqueName8 = Integration\\ConsoleAppBase\\ConsoleAppBase.csproj
-		SccProjectTopLevelParentUniqueName8 = TransitTracker.sln
-		SccProjectName8 = Integration/ConsoleAppBase
-		SccLocalPath8 = Integration\\ConsoleAppBase
-		SccProjectUniqueName9 = Modules\\Modules.Logging\\Modules.Logging.csproj
-		SccProjectTopLevelParentUniqueName9 = TransitTracker.sln
-		SccProjectName9 = Modules/Modules.Logging
-		SccLocalPath9 = Modules\\Modules.Logging
-		SccProjectUniqueName10 = TransitTracker\\TransitTracker.csproj
-		SccProjectName10 = TransitTracker
-		SccLocalPath10 = TransitTracker
-		SccProjectUniqueName11 = Framework\\Framework.AutoFac\\Framework.AutoFac\\Framework.AutoFac.csproj
-		SccProjectTopLevelParentUniqueName11 = TransitTracker.sln
-		SccProjectName11 = Framework/Framework.AutoFac/Framework.AutoFac
-		SccLocalPath11 = Framework\\Framework.AutoFac\\Framework.AutoFac
-		SccProjectUniqueName12 = UnitTests\\CommandLineUnitTests\\CommandLineUnitTests.csproj
-		SccProjectTopLevelParentUniqueName12 = TransitTracker.sln
-		SccProjectName12 = UnitTests/CommandLineUnitTests
-		SccLocalPath12 = UnitTests\\CommandLineUnitTests
-		SccProjectUniqueName13 = UnitTests\\FrameworkUnitTests\\FrameworkUnitTests\\FrameworkUnitTests.csproj
-		SccProjectTopLevelParentUniqueName13 = TransitTracker.sln
-		SccProjectName13 = UnitTests/FrameworkUnitTests/FrameworkUnitTests
-		SccLocalPath13 = UnitTests\\FrameworkUnitTests\\FrameworkUnitTests
-		SccProjectUniqueName14 = UnitTests\\Framework\\Framework\\Framework.UnitTests.csproj
-		SccProjectTopLevelParentUniqueName14 = TransitTracker.sln
-		SccProjectName14 = UnitTests/Framework/Framework
-		SccLocalPath14 = UnitTests\\Framework\\Framework
-		SccProjectUniqueName15 = Framework\\Framework.Interceptor\\Framework.Interceptor\\Framework.Interceptor.csproj
-		SccProjectTopLevelParentUniqueName15 = TransitTracker.sln
-		SccProjectName15 = Framework/Framework.Interceptor/Framework.Interceptor
-		SccLocalPath15 = Framework\\Framework.Interceptor\\Framework.Interceptor
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82049E28-44F6-4A45-B020-3D56CCAF87DF}
 	EndGlobalSection
 EndGlobal
