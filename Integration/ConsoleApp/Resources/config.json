@@ -1,16 +1,7 @@
 {
 	"modules": [
 		{
-			"type": "Console.Config.Commands, Console"
-		},
-		{
-			"type": "Console.Config.Input, Console"
-		},
-		{
-			"type": "Console.Config.Output, Console"
-		},
-		{
-			"type": "Console.Config.Users, Console"
+			"type": "Console.Config.AutofacModule, Console"
 		}
 	]
 }
