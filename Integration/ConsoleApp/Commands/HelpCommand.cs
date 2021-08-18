@@ -31,7 +31,7 @@ namespace Console.Commands
 		public string Name => "help";
 
 
-		public void Execute(string[] args)
+		public virtual void Execute(string[] args)
         {
             using (new HelpConsoleDecorator(_console))
             {
@@ -41,21 +41,7 @@ namespace Console.Commands
 
 				// Print ourselves
 				_console.WriteLine($"{Name} : {Description}");
-
-				foreach(var command in _commands)
-				{
-					if(command is HistoryCommand cmd)
-					{
-						cmd.AddCommandToHistory(this);
-						break;
-					}
-				}
 			}
         }
-
-		private void Visit(HistoryCommand historyCommand)
-		{
-			historyCommand.AddCommandToHistory(this);
-		}
 	}
 }

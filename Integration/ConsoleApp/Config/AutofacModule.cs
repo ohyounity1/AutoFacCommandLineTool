@@ -23,7 +23,7 @@ namespace Console.Config
 			builder.RegisterType<LoginCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<LoggingProgram>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<ConnectCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
-			builder.RegisterType<HelpCommand>().AsSelf().SingleInstance();
+			builder.RegisterType<HelpCommand>().AsSelf().SingleInstance().EnableClassInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<HistoryCommand>().As<ICommand>().As<IInterceptor>().As<HistoryCommand>().SingleInstance().WithParameter("maxHistoryItems", 20);
 
 			builder.RegisterType<QuitCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));

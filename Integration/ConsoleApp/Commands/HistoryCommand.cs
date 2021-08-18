@@ -72,8 +72,6 @@ namespace Console.Commands
             {
                 if (invocation.Method.Name == nameof(ICommand.Execute))
                     AddCommandToHistory(command);
-                if (invocation.Method.Name == "get_" + nameof(ICommand.Description) && command is HelpCommandDescription)
-                    AddCommandToHistory(command);
             }
             invocation.Proceed();
         }
