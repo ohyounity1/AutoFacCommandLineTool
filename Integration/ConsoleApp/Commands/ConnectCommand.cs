@@ -45,7 +45,7 @@ namespace Console.Commands
         {
             var options = new Options();
             var results = ParseArguments(args, ref options);
-            if (!results.Errors.Any())
+            if (results != null && !results.Errors.Any())
             {
                 Console.WriteLine($"Connecting to IP: {options.IPAddress}; Port: {options.Port}; Type: {options.Type}");
             }

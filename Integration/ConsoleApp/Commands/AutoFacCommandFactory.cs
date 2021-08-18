@@ -22,8 +22,8 @@ namespace Console.Commands
         public IDictionary<string, ICommand> CreateCommands(IUser currentUser)
         {
             var validCmds = _commands.Where(c => currentUser.AllowCommand(c)).ToDictionary((c) => c.Name.ToLower());
-			if (validCmds.ContainsKey(_help.Name))
-				validCmds[_help.Name] = _help;
+			// Add help directly
+			validCmds.Add(_help.Name, _help);
 			return validCmds;
         }
     }

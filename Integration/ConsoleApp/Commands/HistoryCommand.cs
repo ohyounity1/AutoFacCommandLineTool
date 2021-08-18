@@ -47,7 +47,7 @@ namespace Console.Commands
             _maxHistoryItems = maxHistoryItems;
         }
 
-        private void AddCommandToHistory(ICommand command)
+        public void AddCommandToHistory(ICommand command)
         {
             if (_historyStack.Count >= _maxHistoryItems)
                 _historyStack.Dequeue();

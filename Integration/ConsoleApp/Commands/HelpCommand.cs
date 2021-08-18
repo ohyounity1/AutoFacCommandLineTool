@@ -9,7 +9,7 @@ using ConsoleApp.Framework.Parser;
 
 namespace Console.Commands
 {
-    public class HelpCommand : HelpCommandDescription
+    public class HelpCommand : ICommand
     {
         private readonly IEnumerable<ICommand> _commands;
         private readonly IConsole _console;
@@ -24,15 +24,38 @@ namespace Console.Commands
             _usersObserver = usersObserver;
         }
 
-        public override void Execute(string[] args)
+		public bool BasicAllowed => true;
+
+		public string Description => "Displays help";
+
+		public string Name => "help";
+
+
+		public void Execute(string[] args)
         {
-            base.Execute(args);
             using (new HelpConsoleDecorator(_console))
             {
                 _console.WriteLine("Following are available: ");
                 var currentUser = _usersObserver.User;
                 _commands.Where(c => currentUser.AllowCommand(c)).ForEach((c) => _console.WriteLine($"{c.Name} : {c.Description}"));
-            }
+
+				// Print ourselves
+				_console.WriteLine($"{Name} : {Description}");
+
+				foreach(var command in _commands)
+				{
+					if(command is HistoryCommand cmd)
+					{
+						cmd.AddCommandToHistory(this);
+						break;
+					}
+				}
+			}
         }
-    }
+
+		private void Visit(HistoryCommand historyCommand)
+		{
+			historyCommand.AddCommandToHistory(this);
+		}
+	}
 }

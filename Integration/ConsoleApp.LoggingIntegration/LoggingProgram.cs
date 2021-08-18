@@ -29,7 +29,7 @@ namespace ConsoleApp.LoggingIntegration
         {
             var options = new Options();
             var results = ParseArguments(args, ref options);
-            if(!results.Errors.Any())
+            if(results != null && !results.Errors.Any())
             {
                 Console.WriteLine("oh, hi!");
                 if (options.Log4NetTest)

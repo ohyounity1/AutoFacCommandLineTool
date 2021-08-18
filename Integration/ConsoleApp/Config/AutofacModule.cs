@@ -21,7 +21,6 @@ namespace Console.Config
 		private void LoadCommands(ContainerBuilder builder)
 		{
 			builder.RegisterType<LoginCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
-			builder.RegisterType<HelpCommandDescription>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<LoggingProgram>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<ConnectCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<HelpCommand>().AsSelf().SingleInstance();
