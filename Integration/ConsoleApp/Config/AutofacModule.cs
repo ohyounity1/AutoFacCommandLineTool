@@ -20,13 +20,14 @@ namespace Console.Config
 	{
 		private void LoadCommands(ContainerBuilder builder)
 		{
-			builder.RegisterType<QuitCommand>().As<ICommand>().SingleInstance();//.EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
-			builder.RegisterType<LoginCommand>().As<ICommand>().SingleInstance();//.EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
-			builder.RegisterType<HelpCommandDescription>().As<ICommand>().SingleInstance();//.EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
-			builder.RegisterType<LoggingProgram>().As<ICommand>().SingleInstance();//.EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
-			builder.RegisterType<ConnectCommand>().As<ICommand>().SingleInstance();//.EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
+			builder.RegisterType<LoginCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
+			builder.RegisterType<HelpCommandDescription>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
+			builder.RegisterType<LoggingProgram>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
+			builder.RegisterType<ConnectCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 			builder.RegisterType<HelpCommand>().AsSelf().SingleInstance();
 			builder.RegisterType<HistoryCommand>().As<ICommand>().As<IInterceptor>().As<HistoryCommand>().SingleInstance().WithParameter("maxHistoryItems", 20);
+
+			builder.RegisterType<QuitCommand>().As<ICommand>().SingleInstance().EnableInterfaceInterceptors().InterceptedBy(typeof(HistoryCommand));
 
 			builder.RegisterType<AutoFacCommandFactory>().As<ICommandFactory>().SingleInstance();
 		}
@@ -35,7 +36,6 @@ namespace Console.Config
 		{
 			builder.RegisterType<InputManager>().InstancePerLifetimeScope();
 
-			//builder.RegisterType<TrimInputModerator>().As<IInputModerator>().SingleInstance();
 			builder.RegisterType<TrimInputModerator>().Named<IInputModerator>(Resources.InputModerators).SingleInstance();
 			builder.RegisterType<LowerInputModerator>().Named<IInputModerator>(Resources.InputModerators).SingleInstance();
 			builder.RegisterComposite<IInputModerator>((c, inners) => new MultiInputModerator(inners), Resources.InputModerators).SingleInstance();

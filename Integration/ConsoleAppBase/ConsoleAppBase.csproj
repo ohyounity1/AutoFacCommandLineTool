@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="ConsoleProgram.cs" />
     <Compile Include="Framework\CommandLine\CommandLineOptions.cs" />
+    <Compile Include="Framework\Commands\ICommandDescription.cs" />
     <Compile Include="Framework\Commands\ICommandFactory.cs" />
     <Compile Include="Framework\Console\ConsoleColorDecoratorBase.cs" />
     <Compile Include="Framework\Console\ErrorConsoleDecorator.cs" />

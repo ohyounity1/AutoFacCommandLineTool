@@ -8,25 +8,23 @@ namespace Console.Commands
 {
     public class AutoFacCommandFactory : ICommandFactory
     {
-        private readonly ILifetimeScope _scope;
-
         private readonly IEnumerable<ICommand> _commands;
-        private readonly HelpCommand _help;
 
-        public AutoFacCommandFactory(ILifetimeScope scope)
+		private readonly HelpCommand _help;
+
+		public AutoFacCommandFactory(IEnumerable<ICommand> commands,
+			HelpCommand help)
         {
-            _scope = scope;
-
-            _commands = _scope.Resolve<IEnumerable<ICommand>>();
-            _help = _scope.Resolve<HelpCommand>();
+            _commands = commands;
+			_help = help;
         }
 
         public IDictionary<string, ICommand> CreateCommands(IUser currentUser)
         {
             var validCmds = _commands.Where(c => currentUser.AllowCommand(c)).ToDictionary((c) => c.Name.ToLower());
-            if (validCmds.ContainsKey(_help.Name))
-                validCmds[_help.Name] = _help;
-            return validCmds;
+			if (validCmds.ContainsKey(_help.Name))
+				validCmds[_help.Name] = _help;
+			return validCmds;
         }
     }
 }

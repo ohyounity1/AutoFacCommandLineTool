@@ -1,11 +1,4 @@
-﻿using System;
-using System.Linq;
-using ConsoleApp.Framework.Console;
-using Console.Config;
-using Autofac;
-using ConsoleApp.Framework.Commands;
-using ConsoleApp.Framework.Input;
-using ConsoleApp.Framework.User;
+﻿using Autofac;
 using ConsoleApp.Framework.CommandLine;
 using Microsoft.Extensions.Configuration;
 using Autofac.Configuration;
@@ -13,7 +6,7 @@ using Console;
 
 namespace ConsoleApp
 {
-    class Program
+	class Program
     {
         static void Main(string[] args)
         {
