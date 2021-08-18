@@ -137,7 +137,6 @@
     <Compile Include="Commands\HistoryCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Commands\QuitCommand.cs" />
-    <Compile Include="Config\AppConfig.cs" />
     <Compile Include="Config\AutofacModule.cs" />
     <Compile Include="MainShell.cs" />
     <Compile Include="Program.cs" />
