@@ -157,10 +157,6 @@
       <Project>{b44a52a6-739b-4ff1-b9a1-450cda7c0cdc}</Project>
       <Name>Framework.AutoFac</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Framework.Interceptor\Framework.Interceptor\Framework.Interceptor.csproj">
-      <Project>{0bc9e133-c698-4be3-86d0-e6cc48b462f2}</Project>
-      <Name>Framework.Interceptor</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Framework\Framework.NET\Framework.NET.csproj">
       <Project>{58b7c459-9204-46c5-b5ff-ea5942248b3c}</Project>
       <Name>Framework.NET</Name>
